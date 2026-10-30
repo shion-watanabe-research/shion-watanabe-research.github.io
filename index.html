@@ -1,0 +1,1916 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#102f36">
+    <meta name="description"
+        content="渡邊詩穏（Shion Watanabe）｜岡山大学大学院博士後期課程。都市・交通計画、防災・減災、洪水時避難、GIS、住民行動分析、シミュレーションの研究ポートフォリオ。">
+    <title>渡邊 詩穏 / Shion Watanabe — Research & Career Portfolio</title>
+    <style>
+        :root {
+            --navy: #102e35;
+            --navy2: #163d45;
+            --text: #183b42;
+            --gray: #587078;
+            --light: #e5e8e1;
+            --cream: #f7f6f1;
+            --white: #fff;
+            --orange: #d47b5c;
+            --mint: #b8d7c9;
+            --mint2: #e7f0eb;
+            --line: #dce2da;
+            --radius: 16px;
+            --shadow: 0 28px 75px rgba(13, 44, 50, .12)
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 88px
+        }
+
+        body {
+            margin: 0;
+            color: var(--text);
+            background: var(--cream);
+            font-family: Inter, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, system-ui, sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button {
+            font: inherit
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #eb996b;
+            outline-offset: 4px
+        }
+
+        ::selection {
+            background: #bed8cb;
+            color: var(--navy)
+        }
+
+        .container {
+            max-width: 1220px;
+            width: calc(100% - 100px);
+            margin: auto
+        }
+
+        .screen-reader {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip-path: inset(50%)
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(247, 246, 241, .95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid #dbe1d8
+        }
+
+        .topnav {
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px
+        }
+
+        .brand-icon {
+            width: 39px;
+            height: 39px;
+            background: var(--navy);
+            border-radius: 10px;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            letter-spacing: -3px;
+            padding-right: 3px
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            font-weight: 780;
+            font-size: 12px;
+            line-height: 1.4;
+            letter-spacing: .065em
+        }
+
+        .brand-text small {
+            font-size: 9px;
+            letter-spacing: .18em;
+            color: var(--gray);
+            font-weight: 650
+        }
+
+        .navlinks {
+            display: flex;
+            align-items: center;
+            gap: 34px
+        }
+
+        .navlinks a {
+            font-size: 11px;
+            font-weight: 790;
+            letter-spacing: .075em
+        }
+
+        .navlinks a:hover {
+            color: #b16043
+        }
+
+        .navlinks .outline-link {
+            border: 1px solid var(--navy);
+            padding: 10px 19px;
+            border-radius: 6px
+        }
+
+        .navlinks .outline-link:hover {
+            color: white;
+            background: var(--navy)
+        }
+
+        .hamburger {
+            display: none;
+            padding: 8px 13px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: transparent;
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--text)
+        }
+
+        .hero {
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+            color: var(--white)
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: -150px;
+            top: -270px;
+            width: 630px;
+            height: 630px;
+            border: 1px solid #ffffff1c;
+            border-radius: 50%;
+            pointer-events: none
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1.07fr .93fr;
+            gap: 70px;
+            align-items: center;
+            min-height: 680px;
+            padding-top: 80px;
+            padding-bottom: 80px
+        }
+
+        .mini-label {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            color: var(--orange);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .23em;
+            text-transform: uppercase
+        }
+
+        .mini-label::before {
+            content: "";
+            height: 1px;
+            width: 23px;
+            background: currentColor
+        }
+
+        .hero .mini-label {
+            color: #eda68b
+        }
+
+        .hero h1 {
+            font-family: "Yu Mincho", "Hiragino Mincho ProN", Georgia, serif;
+            font-size: clamp(42px, 4.3vw, 66px);
+            line-height: 1.55;
+            font-weight: 600;
+            letter-spacing: .025em;
+            margin: 24px 0 25px
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: #e1a488
+        }
+
+        .hero p {
+            font-size: 15px;
+            color: #c0d4d0;
+            max-width: 540px;
+            line-height: 2.1;
+            margin: 0 0 26px
+        }
+
+        .hero-person {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 0 0 34px
+        }
+
+        .hero-person strong {
+            font-size: 16px;
+            color: white;
+            letter-spacing: .05em
+        }
+
+        .hero-person span {
+            font-size: 11px;
+            color: #b4cbc6
+        }
+
+        .hero-person i {
+            height: 23px;
+            width: 1px;
+            background: #567177
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            flex-wrap: wrap
+        }
+
+        .button-primary {
+            display: inline-flex;
+            gap: 25px;
+            align-items: center;
+            justify-content: space-between;
+            background: #d68a6c;
+            color: #102c33;
+            border-radius: 7px;
+            padding: 15px 21px;
+            font-weight: 800;
+            font-size: 12px;
+            transition: transform .2s, background .2s
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            background: #f0ac8b
+        }
+
+        .button-plain {
+            font-size: 12px;
+            font-weight: 750;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #a8c6c0
+        }
+
+        .button-plain:hover {
+            color: #f0ac8b;
+            border-color: #f0ac8b
+        }
+
+        .hero-image {
+            position: relative;
+            min-width: 0
+        }
+
+        .diagram-panel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 17px;
+            background: #deeae1;
+            box-shadow: var(--shadow);
+            border: 7px solid #ffffff0d
+        }
+
+        .diagram-panel svg {
+            width: 100%;
+            height: auto;
+            display: block
+        }
+
+        .diagram-label {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            z-index: 2;
+            background: #fbfff8eb;
+            color: var(--navy);
+            border-radius: 7px;
+            padding: 13px 15px;
+            box-shadow: 0 4px 18px #254b4938;
+            line-height: 1.3
+        }
+
+        .diagram-label small {
+            font-size: 9px;
+            display: block;
+            font-weight: 800;
+            letter-spacing: .15em;
+            color: #69827a
+        }
+
+        .diagram-label strong {
+            font: 600 17px Georgia, serif;
+            display: block;
+            margin-top: 5px
+        }
+
+        .diagram-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #12383fe6;
+            color: #f1f5ec;
+            font-size: 9px;
+            letter-spacing: .12em;
+            font-weight: 800;
+            padding: 15px 18px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px
+        }
+
+        .diagram-footer span:last-child {
+            font-weight: 500;
+            opacity: .7;
+            letter-spacing: 0
+        }
+
+        .figure-note {
+            position: absolute;
+            right: 10px;
+            bottom: -31px;
+            color: #a3b9b2;
+            font-size: 10px
+        }
+
+        .route-line {
+            stroke-dasharray: 6 7;
+            animation: dash 26s linear infinite
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -280
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            .route-line {
+                animation: none
+            }
+
+            * {
+                transition: none !important
+            }
+        }
+
+        .pitch {
+            background: #e8eee8;
+            border-bottom: 1px solid #d8e2da
+        }
+
+        .pitch-inner {
+            display: grid;
+            grid-template-columns: .8fr repeat(3, 1fr);
+            gap: 0;
+            align-items: stretch
+        }
+
+        .pitch-intro {
+            padding: 31px 20px 31px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 7px
+        }
+
+        .pitch-intro strong {
+            font: 600 20px Georgia, serif
+        }
+
+        .pitch-intro span {
+            color: #537168;
+            font-size: 11px;
+            letter-spacing: .08em
+        }
+
+        .pitch-item {
+            padding: 27px 24px;
+            border-left: 1px solid #cfdcd3
+        }
+
+        .pitch-item strong {
+            font-size: 13px;
+            letter-spacing: .04em;
+            display: block;
+            margin-bottom: 4px
+        }
+
+        .pitch-item span {
+            font-size: 11px;
+            color: #61786f;
+            display: block;
+            line-height: 1.9
+        }
+
+        .section {
+            padding: 112px 0
+        }
+
+        .section.alt {
+            background: #eff1eb
+        }
+
+        .section-titleline {
+            display: grid;
+            grid-template-columns: 205px 1fr;
+            gap: 34px;
+            margin-bottom: 39px;
+            align-items: start
+        }
+
+        .count {
+            font-size: 11px;
+            font-weight: 850;
+            letter-spacing: .19em;
+            color: #b66a50
+        }
+
+        .section-titleline h2 {
+            font: 500 clamp(34px, 3.55vw, 48px) Georgia, "Yu Mincho", serif;
+            line-height: 1.25;
+            letter-spacing: -.02em;
+            margin: 0 0 10px
+        }
+
+        .section-titleline p {
+            margin: 0;
+            color: #698081;
+            font-size: 13px
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 85px
+        }
+
+        .about-lead {
+            font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+            font-size: clamp(21px, 2.3vw, 29px);
+            line-height: 1.8;
+            font-weight: 600;
+            margin: 0 0 21px
+        }
+
+        .about-grid p {
+            font-size: 13px;
+            line-height: 2.2;
+            color: #4e6970;
+            margin: 0 0 16px
+        }
+
+        .profile-facts {
+            border-top: 1px solid #d4ddd5
+        }
+
+        .fact {
+            padding: 17px 0;
+            border-bottom: 1px solid #d4ddd5;
+            display: grid;
+            grid-template-columns: 112px 1fr;
+            gap: 10px;
+            align-items: start
+        }
+
+        .fact dt {
+            color: #9a6151;
+            font-size: 10px;
+            font-weight: 850;
+            letter-spacing: .12em
+        }
+
+        .fact dd {
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.9;
+            font-weight: 650
+        }
+
+
+
+
+
+
+
+        .project-list {
+            display: grid;
+            gap: 20px
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns: 37% 63%;
+            border: 1px solid #d7e0d8;
+            border-radius: 15px;
+            background: #fffefa;
+            overflow: hidden;
+            box-shadow: 0 7px 22px #183e4410
+        }
+
+        .project-visual {
+            min-height: 315px;
+            position: relative;
+            background: #dbe7df;
+            overflow: hidden
+        }
+
+        .project-visual svg {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            inset: 0
+        }
+
+        .visual-caption {
+            position: absolute;
+            left: 20px;
+            bottom: 17px;
+            color: #234c4b;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            background: #fcfdf5b8;
+            border: 1px solid #ffffffa6;
+            padding: 6px 11px;
+            border-radius: 5px
+        }
+
+        .project-content {
+            padding: 31px 35px 28px
+        }
+
+        .project-upper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 13px
+        }
+
+        .project-number {
+            color: #ad634c;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .15em
+        }
+
+        .project-state {
+            font-size: 10px;
+            color: #476a61;
+            background: #e6efe7;
+            padding: 5px 10px;
+            border-radius: 99px;
+            font-weight: 750
+        }
+
+        .project h3 {
+            font-size: 21px;
+            line-height: 1.55;
+            margin: 0 0 15px;
+            letter-spacing: .01em
+        }
+
+        .project .summary {
+            font-size: 13px;
+            line-height: 2.05;
+            color: #536b6d;
+            margin: 0 0 19px
+        }
+
+        .perspective {
+            border-left: 3px solid #ce8165;
+            padding: 9px 0 10px 16px;
+            margin: 0 0 21px;
+            background: linear-gradient(90deg, #f6f1e9 0%, transparent 95%)
+        }
+
+        .perspective strong {
+            display: block;
+            font-size: 11px;
+            letter-spacing: .085em;
+            margin-bottom: 5px;
+            color: #985940
+        }
+
+        .perspective p {
+            font-size: 12px;
+            line-height: 1.95;
+            color: #49616a;
+            margin: 0
+        }
+
+
+
+
+        .chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .chip {
+            display: inline-block;
+            background: #eff2eb;
+            border: 1px solid #e2e7df;
+            padding: 5px 10px;
+            font-size: 10px;
+            font-weight: 720;
+            color: #4c6b69;
+            border-radius: 5px
+        }
+
+        .project-footnote {
+            margin: 17px 0 0;
+            font-size: 11px;
+            line-height: 1.8;
+            color: #7b8681
+        }
+
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px
+        }
+
+        .capability {
+            background: #fcfdf9;
+            border: 1px solid #d8e0d7;
+            border-radius: 12px;
+            padding: 23px 20px 24px
+        }
+
+        .capability .cap-ico {
+            display: grid;
+            place-items: center;
+            width: 43px;
+            height: 43px;
+            border-radius: 9px;
+            background: #dfebe3;
+            color: #28625e;
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 19px
+        }
+
+        .capability h3 {
+            font-size: 15px;
+            margin: 0 0 10px
+        }
+
+        .capability p {
+            margin: 0 0 13px;
+            font-size: 12px;
+            line-height: 2;
+            color: #5e7477
+        }
+
+        .capability small {
+            font-size: 10px;
+            color: #a36955;
+            font-weight: 750;
+            letter-spacing: .035em;
+            line-height: 1.8;
+            display: block
+        }
+
+        .method-bottom {
+            margin-top: 28px;
+            padding: 22px 28px;
+            border: 1px solid #cfddd0;
+            border-radius: 10px;
+            background: #e4ece3;
+            display: grid;
+            grid-template-columns: 185px 1fr;
+            gap: 20px;
+            align-items: center
+        }
+
+        .method-bottom strong {
+            font-size: 12px
+        }
+
+        .method-bottom p {
+            font-size: 12px;
+            color: #55706b;
+            margin: 0;
+            line-height: 2
+        }
+
+        .academic-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 65px
+        }
+
+        .academic-grid h3 {
+            font-size: 21px;
+            margin: 0 0 15px
+        }
+
+        .academic-grid p {
+            font-size: 13px;
+            color: #547075;
+            line-height: 2.15;
+            margin: 0 0 19px
+        }
+
+        .research-principles {
+            display: grid;
+            gap: 12px;
+            margin-top: 21px
+        }
+
+        .principle {
+            display: flex;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid #d7e0d8
+        }
+
+        .principle span {
+            color: #b46c53;
+            font: italic 20px Georgia, serif;
+            min-width: 27px
+        }
+
+        .principle p {
+            margin: 0 !important;
+            font-size: 12px !important;
+            color: #4d6970 !important
+        }
+
+        .activity-list {
+            border-top: 1px solid #cfd9d1
+        }
+
+        .activity {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            gap: 15px;
+            border-bottom: 1px solid #cfd9d1;
+            padding: 18px 0
+        }
+
+        .activity time {
+            font-size: 12px;
+            color: #ae6b53;
+            font-weight: 800
+        }
+
+        .activity strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px
+        }
+
+        .activity p {
+            font-size: 11px !important;
+            margin: 0 !important
+        }
+
+        .accuracy {
+            padding: 16px 18px;
+            background: #e9efea;
+            color: #647b75;
+            font-size: 11px;
+            line-height: 1.95;
+            border-radius: 7px;
+            margin-top: 18px
+        }
+
+        .contact {
+            padding: 91px 0 100px;
+            background: var(--navy);
+            color: white
+        }
+
+        .contact .mini-label {
+            color: #e0a088
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 70px;
+            align-items: end
+        }
+
+        .contact h2 {
+            font: 500 clamp(36px, 4vw, 53px) Georgia, "Yu Mincho", serif;
+            line-height: 1.3;
+            margin: 22px 0
+        }
+
+        .contact p {
+            font-size: 13px;
+            line-height: 2.1;
+            color: #b5cbc7;
+            max-width: 500px
+        }
+
+        /* CONTACT — V10 */
+        .contact-info {
+            min-width: 0;
+            border-top: 1px solid #41636a;
+        }
+
+        .contact-detail {
+            padding: 20px 0 21px;
+            border-bottom: 1px solid #41636a;
+        }
+
+        .contact-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #9fbeb6;
+            font-size: 10px;
+            font-weight: 750;
+            letter-spacing: .15em;
+        }
+
+        .contact-email-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .contact-email-link {
+            color: #fff;
+            font-size: clamp(14px, 1.35vw, 17px);
+            font-weight: 680;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-email-link:hover,
+        .research-profile-link:hover {
+            color: #f0ac8b;
+        }
+
+        .contact-copy {
+            padding: 7px 12px;
+            border: 1px solid #70908f;
+            border-radius: 6px;
+            background: transparent;
+            color: #e3eeeb;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 720;
+            white-space: nowrap;
+        }
+
+        .contact-copy:hover { background: #28535a; }
+
+        .contact-copy-status {
+            margin: 5px 0 0 !important;
+            min-height: 1.5em;
+            font-size: 11px !important;
+            color: #d9b9a5 !important;
+        }
+
+        .research-profile-link {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+
+        .research-profile-link .external-mark {
+            font-size: 14px;
+            color: #e0a088;
+        }
+
+        .footer {
+            padding: 24px 0;
+            background: #0c252b;
+            color: #afc4c0;
+            border-top: 1px solid #34525a
+        }
+
+        .footer-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 10px;
+            letter-spacing: .07em
+        }
+
+        .footer a:hover {
+            color: #fff
+        }
+
+        @media(max-width:1030px) {
+            .container {
+                width: calc(100% - 60px)
+            }
+
+            .hero .container {
+                gap: 34px
+            }
+
+            .hero h1 {
+                font-size: clamp(39px, 4.8vw, 56px)
+            }
+
+            .navlinks {
+                gap: 19px
+            }
+
+            .about-grid {
+                gap: 44px
+            }
+
+            .capabilities {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .section-titleline {
+                grid-template-columns: 160px 1fr
+            }
+
+            .pitch-inner {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .pitch-intro {
+                padding: 22px 25px 20px 0
+            }
+
+            .pitch-item {
+                border-bottom: 1px solid #cfdcd3
+            }
+
+            .pitch-item:nth-child(2) {
+                border-left: 1px solid #cfdcd3
+            }
+        }
+
+        @media(max-width:750px) {
+            html {
+                scroll-padding-top: 72px
+            }
+
+            .container {
+                width: calc(100% - 36px)
+            }
+
+            .topnav {
+                height: 66px
+            }
+
+            .brand-text {
+                font-size: 11px
+            }
+
+            .hamburger {
+                display: block
+            }
+
+            .navlinks {
+                display: none;
+                position: absolute;
+                top: 66px;
+                left: 0;
+                right: 0;
+                background: #f7f6f1;
+                padding: 12px 19px 21px;
+                flex-direction: column;
+                gap: 5px;
+                align-items: stretch;
+                box-shadow: 0 16px 24px #122e3118;
+                border-bottom: 1px solid #d8e0d7
+            }
+
+            .navlinks.open {
+                display: flex
+            }
+
+            .navlinks a {
+                padding: 11px 7px;
+                font-size: 12px
+            }
+
+            .navlinks .outline-link {
+                text-align: center
+            }
+
+            .hero .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 46px;
+                padding-top: 67px;
+                padding-bottom: 78px;
+                min-height: auto
+            }
+
+            .hero h1 {
+                font-size: clamp(36px, 9vw, 52px);
+                margin: 20px 0 19px
+            }
+
+            .hero p {
+                font-size: 13px
+            }
+
+            .hero-person {
+                flex-wrap: wrap
+            }
+
+            .hero-image {
+                max-width: 560px
+            }
+
+            .figure-note {
+                bottom: -26px
+            }
+
+            .pitch-inner {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .pitch-intro {
+                padding: 23px 10px 20px 0
+            }
+
+            .pitch-item {
+                padding: 23px 11px
+            }
+
+            .pitch-item:nth-child(3) {
+                border-left: 0
+            }
+
+            .pitch-item strong {
+                font-size: 12px
+            }
+
+            .section {
+                padding: 75px 0
+            }
+
+            .section-titleline {
+                display: block;
+                margin-bottom: 28px
+            }
+
+            .section-titleline h2 {
+                margin-top: 13px;
+                font-size: 37px
+            }
+
+            .about-grid,
+            .academic-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 35px
+            }
+
+            .project {
+                grid-template-columns: 1fr
+            }
+
+            .project-visual {
+                min-height: 230px;
+                height: 230px
+            }
+
+            .project-content {
+                padding: 25px 23px 26px
+            }
+
+            .project h3 {
+                font-size: 19px
+            }
+
+            .capabilities {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .method-bottom {
+                grid-template-columns: 1fr;
+                gap: 10px
+            }
+
+            .contact {
+                padding: 72px 0
+            }
+
+            .footer-line {
+                flex-wrap: wrap
+            }
+        }
+
+        @media(max-width:460px) {
+            .pitch-inner {
+                grid-template-columns: 1fr
+            }
+
+            .pitch-intro {
+                padding-bottom: 6px
+            }
+
+            .pitch-item {
+                border-left: 0 !important;
+                border-top: 1px solid #ceddd1;
+                border-bottom: 0;
+                padding: 14px 0
+            }
+
+            .pitch-item strong {
+                display: inline;
+                margin-right: 9px
+            }
+
+            .pitch-item span {
+                display: inline
+            }
+
+            .capabilities {
+                grid-template-columns: 1fr
+            }
+
+
+
+            .diagram-label {
+                padding: 8px 10px
+            }
+
+            .diagram-label strong {
+                font-size: 14px
+            }
+
+            .diagram-footer {
+                font-size: 8px;
+                padding: 11px
+            }
+
+            .hero h1 {
+                font-size: 36px
+            }
+
+            .hero-person i {
+                display: none
+            }
+
+            .hero-person {
+                display: grid;
+                gap: 4px
+            }
+
+            .section-titleline h2 {
+                font-size: 33px
+            }
+        }
+
+        @media print {
+
+            header,
+            .actions,
+            .mode-switch,
+            .footer a {
+                display: none !important
+            }
+
+            .hero {
+                background: #fff;
+                color: #102e35
+            }
+
+            .hero .container {
+                min-height: auto;
+                padding: 30px 0
+            }
+
+            .hero p,
+            .hero-person span {
+                color: #314d51
+            }
+
+            .diagram-panel {
+                box-shadow: none
+            }
+
+            .section,
+            .contact {
+                padding: 30px 0;
+                background: #fff !important;
+                color: #102e35 !important
+            }
+
+            .project,
+            .capability {
+                break-inside: avoid
+            }
+
+            .contact p,
+            .contact-box span {
+                color: #476169
+            }
+
+            .contact-box {
+                border-color: #aaa
+            }
+
+            .research-principles {
+                break-inside: avoid
+            }
+        }
+
+        /* PROJECTS v3 — three-tier research portfolio */
+        .project-group { margin-top: 20px; }
+        .project-group + .project-group { margin-top: 66px; }
+        .project-group-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin: 0 0 20px; border-bottom: 1px solid #cad9d1; padding-bottom: 16px; }
+        .project-group-heading h3 { font: 500 25px Georgia, "Yu Mincho", serif; margin: 5px 0 0; line-height: 1.5; }
+        .project-group-kicker { color: #a45d46; font-size: 10px; font-weight: 850; letter-spacing: .16em; }
+        .project-group-heading > p { margin: 0; max-width: 500px; font-size: 12px; line-height: 1.9; color: #5c7373; text-align: right; }
+        .other-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 15px; }
+        .other-card { background: #fffefa; border: 1px solid #d7e0d8; border-radius: 12px; padding: 24px 22px 25px; box-shadow: 0 4px 18px #183e4409; }
+        .other-card-header { border-bottom: 1px solid #e4e9e3; padding-bottom: 14px; }
+        .other-card-header > span { color: #ae644c; font-size: 10px; font-weight: 850; letter-spacing: .12em; }
+        .other-card h4 { margin: 8px 0 5px; font-size: 17px; line-height: 1.55; }
+        .other-card-header p { margin: 0; color: #63807e; font-size: 11px; line-height: 1.8; }
+        .other-card ul { padding: 0 0 0 18px; margin: 17px 0 0; }
+        .other-card li { font-size: 12px; color: #3f6268; line-height: 1.9; padding-left: 2px; margin: 0 0 11px; overflow-wrap: anywhere; }
+        .other-card li::marker { color: #c17c61; }
+        .other-links { margin: 15px 0 0; font-size: 12px; line-height: 1.9; color: #576f72; }
+        .other-links a { color: #98523b; text-decoration: underline; text-underline-offset: 3px; }
+        .other-links a:hover { color: #783a2a; }
+        .upcoming-panel { background: #e4ece5; border: 1px solid #cbdcd0; padding: 27px 30px; border-radius: 12px; display: grid; grid-template-columns: 180px 1fr; gap: 30px; }
+        .upcoming-meta { display: flex; flex-direction: column; gap: 3px; border-right: 1px solid #c7d9cb; }
+        .upcoming-year { font: 500 24px Georgia, serif; color: #235456; }
+        .upcoming-meta > span:last-child { color: #6b7d71; font-size: 11px; }
+        .upcoming-details h4 { margin: 0 0 7px; font-size: 17px; }
+        .upcoming-details p { margin: 0; color: #526d6a; font-size: 12px; line-height: 1.95; }
+        @media(max-width:1030px) { .other-grid {grid-template-columns: repeat(2,minmax(0,1fr));} }
+        @media(max-width:750px) { .project-group + .project-group {margin-top: 48px;} .project-group-heading {display:block;} .project-group-heading > p {text-align:left; margin-top:6px;} .other-grid {grid-template-columns: 1fr;} .upcoming-panel {grid-template-columns: 1fr; gap: 12px; padding: 23px;} .upcoming-meta {border-right:0; border-bottom:1px solid #c7d9cb; padding-bottom: 11px;} }
+
+        /* V4: a single research description, with no view toggle. */
+        .project-intro {
+            max-width: 780px; margin: 0 0 35px;
+            color: #526b6c; font-size: 13px; line-height: 2;
+        }
+        .hero-photo {
+            aspect-ratio: 1.03; min-height: 365px; isolation: isolate;
+            border: 7px solid rgba(255,255,255,.12);
+        }
+        .hero-photo > img {
+            display: block; width: 100%; height: 100%;
+            position: absolute; inset: 0; object-fit: cover;
+            object-position: 52% center; filter: saturate(.83) contrast(1.04);
+        }
+        .hero-photo::after {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background: linear-gradient(180deg,rgba(11,39,43,.06) 34%,rgba(11,39,43,.45) 100%);
+            z-index: 0;
+        }
+        .hero-photo-label {
+            position: absolute; left: 20px; top: 20px; z-index: 2;
+            padding: 14px 17px; border-radius: 9px;
+            background: rgba(255,255,251,.92); color: #103239;
+            box-shadow: 0 7px 24px rgba(16,46,53,.12);
+        }
+        .hero-photo-label small {
+            display:block; font-size: 9px; letter-spacing:.18em;
+            color: #607b75; font-weight:800;
+        }
+        .hero-photo-label strong {
+            display:block; font: 600 17px Georgia,serif; margin-top:5px;
+        }
+        .hero-photo .diagram-footer {z-index:2;}
+        .image-photo { background: #dfe7df; }
+        .image-photo img {
+            position: absolute; inset: 0; display:block;
+            width:100%;height:100%;object-fit:cover;
+            object-position:center;filter:saturate(.9) contrast(1.03);
+            transition:transform .45s ease;
+        }
+        .project:hover .image-photo img {transform:scale(1.035);}
+        .image-photo::after {
+            content:'';position:absolute;inset:40% 0 0;
+            background:linear-gradient(180deg,transparent,rgba(13,48,50,.35));
+            pointer-events:none;
+        }
+        .image-photo .visual-caption {
+            z-index:1; left: 17px;right:17px;bottom:16px;
+            display:flex;gap:12px;justify-content:space-between;
+            align-items:center;color:#194449;font-size:10px;
+            letter-spacing:.025em;background:rgba(255,255,249,.92);
+            border-color:rgba(255,255,255,.9);padding:9px 12px;
+        }
+        .visual-credit {opacity:.6;font-size:9px;white-space:nowrap;}
+        @media(max-width:750px) {
+            .hero-photo {min-height:315px;aspect-ratio:1.2;}
+            .project-intro {margin-bottom:26px;font-size:12px;}
+        }
+        @media(max-width:460px) {
+            .hero-photo {min-height:270px;}
+            .hero-photo-label {left:13px;top:13px;padding:11px 12px;}
+            .hero-photo-label strong {font-size:14px;}
+            .image-photo .visual-caption {font-size:9px;}
+        }
+        @media(prefers-reduced-motion:reduce){.image-photo img{transition:none}.project:hover .image-photo img{transform:none}}
+
+
+        /* V9 hero: preserve the stage photo as a portrait image within the original frame. */
+        .hero-photo-report { background: #252c2c; }
+        .hero-photo-report > img {
+            object-position: 54% 36%;
+            filter: none;
+        }
+        .hero-photo-report::after {
+            background: linear-gradient(180deg,rgba(11,39,43,.03) 35%,rgba(11,39,43,.50) 100%);
+        }
+        /* V9 About: substantial, factual education timeline fills left negative space. */
+        .about-copy { min-width: 0; }
+        .about-education { margin-top: 44px; max-width: 620px; }
+        .about-education-heading {
+            display: flex; align-items: baseline; gap: 13px;
+            padding-bottom: 13px; border-bottom: 1px solid #d4ddd5;
+        }
+        .about-education-heading h4 {
+            font: 500 23px Georgia, 'Yu Mincho', serif;
+            margin: 0; letter-spacing: -.02em;
+        }
+        .about-education-heading span {
+            color: #b66a50; font-weight: 750; font-size: 10px;
+            letter-spacing: .10em;
+        }
+        .education-item {
+            display: grid; grid-template-columns: 108px 1fr;
+            gap: 18px; border-bottom: 1px solid #d4ddd5;
+            padding: 15px 0;
+        }
+        .education-item time { font-size: 11px; color: #ad6a50; font-weight: 800; }
+        .education-item strong { display: block; font-size: 12px; font-weight: 750; line-height: 1.75; }
+        .education-item small { display: block; margin-top: 3px; font-size: 11px; color: #647a7a; }
+        @media(max-width:750px) { .about-education { margin-top: 31px; } }
+        @media(max-width:460px) { .education-item { grid-template-columns: 78px 1fr; gap: 12px; } }
+
+        /* PROFILE PHOTO (V7): original pixels preserved, responsive display only */
+        .profile-column { min-width: 0; }
+        .profile-portrait {
+            margin: 0 0 28px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .profile-portrait img {
+            display: block;
+            width: min(100%, 226px);
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 13px 34px rgba(16, 46, 53, .10);
+        }
+        @media (max-width: 750px) {
+            .profile-portrait { margin-bottom: 24px; }
+            .profile-portrait img { width: min(100%, 210px); }
+        }
+        @media print {
+            .profile-portrait img { width: 150px; box-shadow: none; }
+        }
+
+        /* ACADEMIC V11 — verified publications, consistent with the existing portfolio palette */
+        .academic-overview {display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);align-items:center;gap:60px;padding:28px 0 54px;border-bottom:1px solid #d5ded6}
+        .academic-kicker {display:block;font-size:10px;letter-spacing:.18em;font-weight:800;color:#b06b52;margin-bottom:11px}
+        .academic-overview h3 {font:500 clamp(23px,2.5vw,32px) Georgia,'Yu Mincho',serif;margin:0 0 15px;line-height:1.5}
+        .academic-overview p {font-size:13px;line-height:2.05;color:#5a7272;max-width:670px;margin:0 0 17px}
+        .academic-external {display:inline-block;font-size:12px;font-weight:750;color:var(--navy);border-bottom:1px solid #97b1a6;padding-bottom:3px}
+        .academic-external:hover,.pub-card-bottom a:hover,.pub-featured a:hover {color:#ad644d}
+        .academic-numbers {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-self:stretch;align-items:center}
+        .academic-numbers div {padding:16px 8px;border-left:1px solid #d1ded4;text-align:center}
+        .academic-numbers strong {display:block;font:500 clamp(27px,3.2vw,44px) Georgia,serif;color:var(--navy);line-height:1.15}
+        .academic-numbers span {display:block;color:#697e7a;font-size:10px;margin-top:9px;font-weight:700;white-space:nowrap}
+        .publications-heading {display:flex;justify-content:space-between;align-items:end;gap:25px;margin:52px 0 23px}
+        .publications-heading h3,.academic-activities-head h3 {font:500 27px Georgia,'Yu Mincho',serif;margin:0;line-height:1.45}
+        .pub-count {color:#738782;font-size:11px;letter-spacing:.06em}
+        .pub-featured {padding:34px 40px 36px;border:1px solid #cbdcd0;border-left:5px solid #bd765b;background:#e4eee6;border-radius:13px}
+        .pub-featured-meta {display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#99644f;font-size:10px;font-weight:800;letter-spacing:.12em}
+        .pub-featured h4 {font-size:19px;line-height:1.65;margin:15px 0 12px;max-width:960px;color:var(--navy)}
+        .pub-authors {font-size:12px;line-height:1.85;color:#536c70;margin:0 0 9px}
+        .pub-authors strong {color:#16383e;font-weight:800}
+        .pub-citation {font-size:12px;line-height:1.85;color:#647a76;margin:0}
+        .pub-featured a {display:inline-block;margin-top:17px;font-size:12px;font-weight:800;color:#1d5858;border-bottom:1px solid #a9c2b6;padding-bottom:3px}
+        .pub-subheading {margin:41px 0 17px;display:flex;gap:15px;align-items:baseline}
+        .pub-subheading h4 {font-size:17px;margin:0;color:#173a40}
+        .pub-subheading span {font-size:11px;color:#657d78}
+        .pub-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+        .pub-card {display:flex;flex-direction:column;padding:24px 25px 22px;background:#fffefa;border:1px solid #d7e1d7;border-radius:12px;min-width:0;box-shadow:0 5px 18px #15383a07}
+        .pub-card-top {display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+        .pub-year {font-size:12px;font-weight:850;color:#ab654f;letter-spacing:.08em}
+        .pub-area {font-size:10px;color:#71857f;letter-spacing:.08em}
+        .pub-card h4 {font-size:15px;line-height:1.75;margin:13px 0 12px;font-weight:740;overflow-wrap:anywhere;color:#1b3f44}
+        .pub-card .pub-authors {margin-bottom:20px;font-size:11px;line-height:1.9}
+        .pub-card-bottom {display:flex;justify-content:space-between;align-items:end;gap:18px;margin-top:auto;padding-top:15px;border-top:1px solid #e3e9e2;flex-wrap:wrap}
+        .pub-card-bottom .pub-citation {font-size:11px;flex:1;min-width:180px}
+        .pub-card-bottom a {font-size:11px;font-weight:770;white-space:nowrap;color:#2b6560}
+        .publication-note {font-size:11px;line-height:2;color:#70837e;margin:17px 0 0}
+        .academic-activities {border-top:1px solid #d5ded6;margin-top:64px;padding-top:36px}
+        .academic-activities-head {margin:0 0 19px}
+        .academic-activities-head h3 small {font:normal 12px 'Yu Gothic',Meiryo,sans-serif;color:#71837d}
+        .academic-activity-rows {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+        .academic-activity-row {display:grid;grid-template-columns:52px 1fr;gap:13px;align-items:start;border-top:1px solid #cbd9d0;padding-top:16px}
+        .academic-activity-row time {color:#aa6852;font-size:12px;font-weight:830}
+        .academic-activity-row strong {font-size:12px;line-height:1.7}
+        .academic-activity-row p {font-size:11px;line-height:1.9;color:#607874;margin:6px 0 0}
+        .academic-activity-note {font-size:10px;color:#758882;margin:19px 0 0}
+        @media(max-width:900px) {.academic-overview {gap:25px;grid-template-columns:1fr}.academic-numbers {max-width:480px}.academic-activity-rows {grid-template-columns:1fr}.pub-grid {gap:13px}}
+        @media(max-width:750px) {.academic-overview {padding:12px 0 36px}.publications-heading {margin-top:38px}.pub-grid {grid-template-columns:1fr}.pub-featured {padding:26px 23px}.pub-featured h4 {font-size:17px}.pub-count {font-size:10px}.academic-activities {margin-top:43px}.pub-card {padding:22px 21px}.academic-numbers strong {font-size:33px}}
+        @media(max-width:390px) {.publications-heading {display:block}.pub-count {display:block;margin-top:6px}.academic-numbers span {white-space:normal}.pub-featured-meta {display:block}.pub-featured-meta span+span {display:block;margin-top:5px}}
+
+
+        /* ACADEMIC V12: conference records + community outreach */
+        .academic-activities-head {margin-bottom:22px}
+        .academic-activities-head h3 {margin-top:0}
+        .conference-list {display:grid;gap:13px}
+        .conference-item {display:grid;grid-template-columns:85px minmax(0,1fr);gap:21px;padding:23px 27px;background:#fffefa;border:1px solid #d7e1d7;border-radius:11px}
+        .conference-item time {font:500 23px Georgia,serif;color:#b36f56;line-height:1.4}
+        .conference-item h4 {margin:0 0 9px;font-size:15px;line-height:1.75;color:var(--navy)}
+        .conference-authors {margin:0 0 6px;color:#536c70;font-size:12px;line-height:1.85}
+        .conference-authors strong {color:var(--navy)}
+        .conference-venue {margin:0;color:#667c77;font-size:11px;line-height:1.8}
+        .conference-note {font-size:11px;line-height:1.9;color:#697f78;margin:17px 0 0}
+        .academic-outreach {margin-top:42px;border-top:1px solid #d5ded6;padding-top:31px}
+        .academic-outreach .academic-activities-head h3 {font-size:23px}
+        .academic-outreach .academic-activity-rows {grid-template-columns:repeat(2,minmax(0,1fr))}
+        @media(max-width:750px){
+            .conference-item {grid-template-columns:1fr;gap:7px;padding:20px 20px}
+            .conference-item time {font-size:19px}
+            .academic-outreach .academic-activity-rows {grid-template-columns:1fr}
+        }
+    </style>
+</head>
+
+<body id="top">
+    <a class="screen-reader" href="#main">本文へ移動</a>
+    <header>
+        <nav class="container topnav" aria-label="メインナビゲーション">
+            <a href="#top" class="brand" aria-label="渡邊詩穏 ホームに戻る"><span class="brand-icon"
+                    aria-hidden="true">SW</span><span class="brand-text">SHION WATANABE<small>RESEARCH & CAREER
+                        PORTFOLIO</small></span></a>
+            <button class="hamburger" type="button" aria-controls="navlinks" aria-expanded="false">MENU ☰</button>
+            <div class="navlinks" id="navlinks"><a href="#about">ABOUT</a><a href="#projects">PROJECTS</a><a
+                    href="#expertise">EXPERTISE</a><a href="#academic">ACADEMIC</a><a href="#contact"
+                    class="outline-link">CONTACT ↗</a></div>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div>
+                    <div class="mini-label">RESEARCH × REAL-WORLD IMPACT</div>
+                    <h1 id="hero-title">研究を、<br>社会の<em>意思決定</em>に<br>つなぐ。</h1>
+                    <p>都市・交通計画と防災・減災を専門に、住民の行動と都市の空間構造を、調査・統計・GIS・シミュレーションから捉えます。現場の課題を定量化し、実際に機能する対策を考える研究に取り組んでいます。
+                    </p>
+                    <div class="hero-person"><strong>渡邊 詩穏　<span style="font-weight:500;color:#c1d1cc">/ Shion
+                                Watanabe</span></strong><i></i><span>岡山大学大学院 博士後期課程</span></div>
+                    <div class="actions"><a class="button-primary" href="#projects">研究・プロジェクトを見る <span
+                                aria-hidden="true">↗</span></a><a class="button-plain" href="#expertise">専門スキルを見る ↗</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="diagram-panel hero-photo hero-photo-report">
+                        <img src="images/hero-community-report.webp" width="1536" height="2048" alt="地域の防災報告会で研究成果を説明している様子" decoding="async" fetchpriority="high">
+                        <div class="hero-photo-label"><small>FIELD REPORT</small><strong>Research in the Community</strong></div>
+                        <div class="diagram-footer"><span>RESEARCH × COMMUNITY</span><span>防災報告会での発表</span></div>
+                    </div>
+                    <span class="figure-note">地域の防災報告会における研究成果の報告風景</span>
+                </div>
+            </div>
+        </section>
+        <div class="pitch">
+            <div class="container pitch-inner">
+                <div class="pitch-intro"><strong>My Approach</strong><span>研究の強みを3つの視点から</span></div>
+                <div class="pitch-item"><strong>01　現場から問いを立てる</strong><span>地域調査・住民アンケート</span></div>
+                <div class="pitch-item"><strong>02　データで検証する</strong><span>GIS・統計・モデル分析</span></div>
+                <div class="pitch-item"><strong>03　施策を比較する</strong><span>シナリオ・シミュレーション</span></div>
+            </div>
+        </div>
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-titleline">
+                    <div class="count">01 / PROFILE</div>
+                    <div>
+                        <h2>About me.</h2>
+                        <p>研究の背景と、取り組みの姿勢</p>
+                    </div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-copy">
+                        <h3 class="about-lead">地域で見えてきた課題を、<br>定量的に説明できるかたちへ。</h3>
+                        <p>地域が抱える課題は、既存のデータだけでは捉えきれないことがあります。実際に地域に足を運び、住民の声や地域活動の実態に触れることで見えてくる課題を出発点に、アンケート調査やヒアリング、統計分析、GIS、シミュレーションなどを用いて、定量的に捉え、検証することを大切にしています。
+                        </p>
+                        <p>これまで、住民主体の地域防災活動が地域住民の防災意識・行動とどのように関係するかを分析するとともに、活動組織の持続可能性に関わる運営体制や参加動機についても研究してきました。現在は、洪水時の住民避難を対象に、住民の行動と道路の浸水状況を組み合わせた分析に取り組んでいます。
+                        </p>
+                        <section class="about-education" aria-labelledby="education-heading">
+                            <div class="about-education-heading">
+                                <h4 id="education-heading">Education.</h4>
+                                <span>学歴</span>
+                            </div>
+                            <div class="education-item">
+                                <time datetime="2026-04">2026.04 –</time>
+                                <div><strong>岡山大学大学院 環境生命自然科学研究科</strong><small>博士後期課程 在学中</small></div>
+                            </div>
+                            <div class="education-item">
+                                <time datetime="2026-03">2026.03</time>
+                                <div><strong>岡山大学大学院 環境生命自然科学研究科</strong><small>博士前期課程 修了／修士（工学）</small></div>
+                            </div>
+                            <div class="education-item">
+                                <time datetime="2024-03">2024.03</time>
+                                <div><strong>岡山大学 環境理工学部 環境デザイン工学科</strong><small>卒業</small></div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="profile-column">
+                        <figure class="profile-portrait">
+                            <img src="images/profile-shion-original.jpg" alt="渡邊詩穏のプロフィール写真（横顔）" width="1440" height="1920" loading="lazy" decoding="async">
+                        </figure>
+                        <dl class="profile-facts">
+                        <div class="fact">
+                            <dt>NAME</dt>
+                            <dd>渡邊 詩穏<br>Shion Watanabe</dd>
+                        </div>
+                        <div class="fact">
+                            <dt>AFFILIATION</dt>
+                            <dd>岡山大学大学院 環境生命自然科学研究科 博士後期課程</dd>
+                        </div>
+                        <div class="fact">
+                            <dt>RESEARCH FIELDS</dt>
+                            <dd>都市・交通計画／防災・減災／洪水時避難／地域防災</dd>
+                        </div>
+                        <div class="fact">
+                            <dt>KEY METHODS</dt>
+                            <dd>GIS・空間解析、統計分析、住民調査、マルチエージェント・シミュレーション</dd>
+                        </div>
+                        <div class="fact">
+                            <dt>LABORATORY</dt>
+                            <dd>交通まちづくり学研究室</dd>
+                        </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section alt" id="projects">
+            <div class="container">
+                <div class="section-titleline">
+                    <div class="count">02 / SELECTED PROJECTS</div>
+                    <div>
+                        <h2>Research projects.</h2>
+                        <p>主要研究・共同研究・今後の研究計画を紹介</p>
+                    </div>
+                </div>
+                <p class="project-intro">修士課程で取り組んだ地域防災の研究と、現在進行中の洪水避難研究を中心に紹介します。各研究の目的・方法・位置付けを、1つの説明にまとめています。</p>
+                <div class="project-group" aria-label="主要研究">
+                    <div class="project-group-heading"><div><span class="project-group-kicker">MAIN RESEARCH</span><h3>主要研究</h3></div><p>修士課程の2テーマと、現在進行中の博士研究を紹介します。</p></div>
+                    <div class="project-list" id="project-list">
+                    <article class="project">
+                        <div class="project-visual image-photo">
+                            <img src="images/research-community-photo.webp" alt="桜が咲く山林の中にある、石積みの砂留を写した現地写真。" width="1600" height="1200" loading="lazy" decoding="async">
+                            <div class="visual-caption">歴史的防災施設 × 地域防災<span class="visual-credit">現地写真</span></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-upper"><span class="project-number">PROJECT 01</span><span class="project-state">修士研究｜成果公表</span></div>
+                            <h3>地域防災活動と住民の防災意識・行動</h3>
+                            <p class="summary">歴史的防災施設「砂留」の住民主体の保全活動を対象に、活動の認知・賛同と、地域住民の防災意識・行動との関連を検討した研究。</p>
+                            <div class="perspective"><strong>研究内容と分析方法</strong><p>砂留の認知や保全活動への賛同と、住民の防災意識・行動の関係を住民アンケートに基づき分析しました。認知・価値評価・賛同等の関連構造を構造方程式モデリング（SEM）などで検討しています。</p></div>
+                            <div class="chips"><span class="chip">住民アンケート</span><span class="chip">SEM</span><span class="chip">防災意識・行動</span><span class="chip">地域防災</span></div>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="project-visual image-photo">
+                            <img src="images/research-participation-photo.webp" alt="屋外の地域活動で、参加者が説明を聞いている様子を写した現地写真。" width="1600" height="1200" loading="lazy" decoding="async">
+                            <div class="visual-caption">住民参加 × 活動組織<span class="visual-credit">活動写真</span></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-upper"><span class="project-number">PROJECT 02</span><span class="project-state">修士研究｜成果公表</span></div>
+                            <h3>地域防災活動への参加と組織の持続可能性</h3>
+                            <p class="summary">砂留保全活動への住民の参加意向の形成過程と、活動を担う組織構造・参加動機のあり方を検討した研究。</p>
+                            <div class="perspective"><strong>研究内容と分析方法</strong><p>地域防災活動への参加意向の形成と、活動を担う組織の運営体制・参加動機を検討しました。住民調査を通じてソーシャル・キャピタル、認知・価値評価と参加意向の関連を分析するとともに、有志型と役割割当型の団体を比較し、参加動機の違いや変容について検討しています。</p></div>
+                            <div class="chips"><span class="chip">参加意向</span><span class="chip">組織体制</span><span class="chip">参加動機</span><span class="chip">ヒアリング</span></div>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="project-visual image-photo">
+                            <img src="images/research-flood-googleearth.webp" alt="洪水時避難研究の対象地域周辺。河川、橋梁、道路、住宅地、農地、山地が見えるGoogle Earthの3D景観画像。" width="1514" height="766" loading="lazy" decoding="async">
+                            <div class="visual-caption">河川・道路 × 避難行動<span class="visual-credit">Google Earth（仮配置）</span></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-upper"><span class="project-number">PROJECT 03</span><span class="project-state">博士研究｜進行中</span></div>
+                            <h3>洪水時の避難行動と到達可能性の評価</h3>
+                            <p class="summary">道路の時系列浸水状況と住民の移動を考慮し、地区内の一時避難場所を活用する段階的避難を含め、避難シナリオを比較・検討する研究。</p>
+                            <div class="perspective"><strong>研究内容と分析方法</strong><p>浸水深・流速などの時系列データを道路ネットワークに対応付け、GAMAによるマルチエージェント・シミュレーション（MAS）で避難行動を表現する研究を進めています。</p></div>
+                            <div class="chips"><span class="chip">ArcGIS Pro</span><span class="chip">道路ネットワーク</span><span class="chip">浸水解析</span><span class="chip">GAMA / MAS</span></div>
+                        </div>
+                    </article>
+                    </div>
+                </div>
+                <div class="project-group other-research" aria-label="その他の研究・共同研究">
+                    <div class="project-group-heading"><div><span class="project-group-kicker">OTHER RESEARCH &amp; COLLABORATIONS</span><h3>その他の研究</h3></div><p>共著論文に関わった分野を紹介します。</p></div>
+                    <div class="other-grid">
+                        <article class="other-card">
+                            <div class="other-card-header"><span>FIELD 01</span><h4>ライドシェア・交通サービス</h4><p>サービスの利用意向と担い手の継続</p></div>
+                            <ul>                            <li>ライドシェアの利用意向・参画意向と居住地特性との関連性に関する研究－岡山県津山市津山地域を対象として－</li>
+                            <li>公共ライドシェアドライバーの実態と継続要因に関する研究</li></ul>
+                        </article>
+                        <article class="other-card">
+                            <div class="other-card-header"><span>FIELD 02</span><h4>通学・移動行動</h4><p>児童生徒の移動と通学環境</p></div>
+                            <ul>                            <li>小学生の登校時における通学行動と移動自由性の関連性－同伴者形態に着目して－</li>
+                            <li>通学時間からみた高等学校の通学可能圏に基づく生徒数推計と統廃合基準に関する研究－岡山県の公立全日制高校を対象として－</li></ul>
+                        </article>
+                        <article class="other-card">
+                            <div class="other-card-header"><span>FIELD 03</span><h4>道路交通・災害復興</h4><p>道路特性と被災後の土地・建物の変化</p></div>
+                            <ul>                            <li>実勢速度と規制速度の乖離の実態及び道路特性との関連性の把握</li>
+                            <li>平成30年7月豪雨後の建物の建替・滅失に着目した建物立地の経年変化に関する研究－岡山県倉敷市真備町を対象として－</li></ul>
+                        </article>
+                    </div>
+                    <p class="other-links">正式な書誌情報・著者順・公開状況は <a href="https://researchmap.jp/Shion_Watanabe" target="_blank" rel="noopener noreferrer">researchmap の研究業績一覧 ↗</a> を参照してください。</p>
+                </div>
+                <div class="project-group upcoming-research" aria-label="今後の研究計画">
+                    <div class="project-group-heading"><div><span class="project-group-kicker">UPCOMING RESEARCH</span><h3>今後の研究計画</h3></div><p></p></div>
+                    <div class="upcoming-panel">
+                        <div class="upcoming-meta"><span class="upcoming-year">2027–</span><span>研究構想（予定）</span></div>
+                        <div class="upcoming-details"><h4>家庭備蓄と災害への備えに関する研究</h4><p>2027年から取り組む予定の研究テーマ。具体的な研究目的・方法・実施状況は、計画が確定した段階で更新します。</p></div>
+                    </div>
+                </div>
+                <p class="project-footnote">※ 主要研究01・02には現地写真・活動写真、主要研究03にはGoogle Earthの研究対象地域周辺の景観画像を使用しています。トップ画像は地域の防災報告会の写真です。</p>
+            </div>
+        </section>
+        <section class="section" id="expertise">
+            <div class="container">
+                <div class="section-titleline">
+                    <div class="count">03 / EXPERTISE</div>
+                    <div>
+                        <h2>What I can do.</h2>
+                        <p>研究で培ってきた、業務にも応用可能な分析・調査のスキル</p>
+                    </div>
+                </div>
+                <div class="capabilities">
+                    <div class="capability">
+                        <div class="cap-ico" aria-hidden="true">01</div>
+                        <h3>GIS・空間分析</h3>
+                        <p>位置・道路・浸水・建物等の空間データを整備し、重ね合わせやネットワーク分析を行う。</p><small>ArcGIS Pro / QGIS / 空間データ処理</small>
+                    </div>
+                    <div class="capability">
+                        <div class="cap-ico" aria-hidden="true">02</div>
+                        <h3>シミュレーション</h3>
+                        <p>水理解析結果とエージェントの移動モデルを接続し、複数の避難シナリオを評価する。</p><small>GAMA / MAS / 時系列浸水データ</small>
+                    </div>
+                    <div class="capability">
+                        <div class="cap-ico" aria-hidden="true">03</div>
+                        <h3>統計・定量分析</h3>
+                        <p>アンケートデータから意識・行動の関係を分析し、仮説と分析結果を整理する。</p><small>SEM / 因子分析 / クラスター分析</small>
+                    </div>
+                    <div class="capability">
+                        <div class="cap-ico" aria-hidden="true">04</div>
+                        <h3>調査・成果共有</h3>
+                        <p>住民調査、関係者への聞き取り、地域報告等を通じて課題を把握・共有する。</p><small>質問票設計 / 現地調査 / 研究発表</small>
+                    </div>
+                </div>
+                <div class="method-bottom"><strong>Research → Practice</strong>
+                    <p>一つのソフトウェアの操作だけでなく、<b>課題設定 → データ取得・整備 → 分析 → 検証 → 結果の伝達</b>までを研究の一連のプロセスとして扱っています。</p>
+                </div>
+            </div>
+        </section>
+        <section class="section alt" id="academic" aria-labelledby="academic-title">
+            <div class="container">
+                <div class="section-titleline">
+                    <div class="count">04 / ACADEMIC</div>
+                    <div>
+                        <h2 id="academic-title">Academic works.</h2>
+                        <p>査読付き論文・学会発表・地域への研究成果報告</p>
+                    </div>
+                </div>
+                <div class="academic-overview">
+                    <div class="academic-overview-copy">
+                        <span class="academic-kicker">PUBLICATIONS &amp; ACTIVITIES</span>
+                        <h3>地域防災・都市交通・災害復興の研究実績。</h3>
+                        <p>地域防災活動、交通・移動行動、道路交通、災害復興などの分野で執筆した査読付き論文を掲載しています。著者順と掲載情報は各論文の情報に合わせて記載しています。</p>
+                        <a class="academic-external" href="https://researchmap.jp/Shion_Watanabe" target="_blank" rel="noopener noreferrer">researchmapで業績一覧を見る ↗</a>
+                    </div>
+                    <div class="academic-numbers" aria-label="査読付き論文の内訳">
+                        <div><strong>09</strong><span>査読付き論文</span></div>
+                        <div><strong>01</strong><span>筆頭著者</span></div>
+                        <div><strong>08</strong><span>共著論文</span></div>
+                    </div>
+                </div>
+                <div class="publications-heading">
+                    <div><span class="academic-kicker">PEER-REVIEWED PUBLICATIONS</span><h3>査読付き論文</h3></div>
+                    <span class="pub-count">9 publications · 2025–2026</span>
+                </div>
+                <article class="pub-featured">
+                    <div class="pub-featured-meta"><span>2026</span><span>FIRST AUTHOR / INTERNATIONAL JOURNAL</span></div>
+                    <h4>From externally initiated participation to autonomous engagement: Motivational transformation in community-based disaster risk reduction</h4>
+                    <p class="pub-authors"><strong>Shion Watanabe</strong>, Teruhisa Higuchi, Seiji Hashimoto</p>
+                    <p class="pub-citation"><em>International Journal of Disaster Risk Reduction</em>, Vol. 146, Article 106515 (2026)</p>
+                    <a href="https://doi.org/10.1016/j.ijdrr.2026.106515" target="_blank" rel="noopener noreferrer">出版社の論文ページ（DOI） ↗</a>
+                </article>
+                <div class="pub-subheading"><h4>Co-authored papers</h4><span>共著論文 · 8件</span></div>
+                <div class="pub-grid"><article class="pub-card">
+        <div class="pub-card-top"><span class="pub-year">2026</span><span class="pub-area">道路交通</span></div>
+        <h4>実勢速度と規制速度の乖離の実態及び道路特性との関連性の把握</h4>
+        <p class="pub-authors">門司 諒平、橋本 成仁、氏原 岳人、<strong>渡邊 詩穏</strong></p>
+        <div class="pub-card-bottom"><span class="pub-citation">都市計画論文集 61(3), 1959–1966</span><a href="https://doi.org/10.11361/journalcpij.61.1959" target="_blank" rel="noopener noreferrer" aria-label="論文のDOI / J-STAGEを開く：実勢速度と規制速度の乖離の実態及び道路特性との関連性の把握">DOI / J-STAGE ↗</a></div>
+    </article>
+<article class="pub-card">
+        <div class="pub-card-top"><span class="pub-year">2026</span><span class="pub-area">交通行動</span></div>
+        <h4>小学生の登校時における通学行動と移動自由性の関連性 ― 同伴者形態に着目して ―</h4>
+        <p class="pub-authors">磯山 亜純、橋本 成仁、氏原 岳人、樋野 公宏、<strong>渡邊 詩穏</strong></p>
+        <div class="pub-card-bottom"><span class="pub-citation">都市計画論文集 61(3), 1896–1902</span><a href="https://doi.org/10.11361/journalcpij.61.1896" target="_blank" rel="noopener noreferrer" aria-label="論文のDOI / J-STAGEを開く：小学生の登校時における通学行動と移動自由性の関連性 ― 同伴者形態に着目して ―">DOI / J-STAGE ↗</a></div>
+    </article>
+<article class="pub-card">
+        <div class="pub-card-top"><span class="pub-year">2026</span><span class="pub-area">災害復興</span></div>
+        <h4>平成30年7月豪雨後の建物の建替・滅失に着目した建物立地の経年変化に関する研究 ― 岡山県倉敷市真備町を対象として ―</h4>
+        <p class="pub-authors">坪井 晟、氏原 岳人、<strong>渡邊 詩穏</strong>、橋本 成仁</p>
+        <div class="pub-card-bottom"><span class="pub-citation">都市計画論文集 61(3), 1645–1652</span><a href="https://doi.org/10.11361/journalcpij.61.1645" target="_blank" rel="noopener noreferrer" aria-label="論文のDOI / J-STAGEを開く：平成30年7月豪雨後の建物の建替・滅失に着目した建物立地の経年変化に関する研究 ― 岡山県倉敷市真備町を対象として ―">DOI / J-STAGE ↗</a></div>
+    </article>
+<article class="pub-card">
+        <div class="pub-card-top"><span class="pub-year">2026</span><span class="pub-area">公共交通</span></div>
+        <h4>ライドシェアの利用意向・参画意向と居住地特性との関連性に関する研究 ― 岡山県津山市津山地域を対象として ―</h4>
+        <p class="pub-authors">廣瀬 暖、<strong>渡邊 詩穏</strong>、橋本 成仁</p>
+        <div class="pub-card-bottom"><span class="pub-citation">都市計画論文集 61(3), 991–998</span><a href="https://doi.org/10.11361/journalcpij.61.991" target="_blank" rel="noopener noreferrer" aria-label="論文ページを開く：ライドシェアの利用意向・参画意向と居住地特性との関連性に関する研究 ― 岡山県津山市津山地域を対象として ―">DOI / J-STAGE ↗</a></div>
+    </article>
+<article class="pub-card">
+        <div class="pub-card-top"><span class="pub-year">2026</span><span class="pub-area">公共交通</span></div>
+        <h4>公共ライドシェアドライバーの実態と継続要因に関する研究</h4>
+        <p class="pub-authors">橋本 成仁、伊藤 直輝、坂本 柊人、樋口 輝久、<strong>渡邊 詩穏</strong></p>
+        <div class="pub-card-bottom"><span class="pub-citation">都市計画論文集 61(3), 959–966</span><a href="https://doi.org/10.11361/journalcpij.61.959" target="_blank" rel="noopener noreferrer" aria-label="論文ページを開く：公共ライドシェアドライバーの実態と継続要因に関する研究">DOI / J-STAGE ↗</a></div>
+    </article>
+<article class="pub-card">
+        <div class="pub-card-top"><span class="pub-year">2026</span><span class="pub-area">地域防災</span></div>
+        <h4>有志によるボランティア活動への住民参加意向の形成プロセス：性格特性およびソーシャル・キャピタルに着目した構造分析 ― 広島県福山市別所地区の砂留保全活動を事例として ―</h4>
+        <p class="pub-authors">樋口 輝久、<strong>渡邊 詩穏</strong>、橋本 成仁</p>
+        <div class="pub-card-bottom"><span class="pub-citation">都市計画論文集 61(1), 102–108</span><a href="https://doi.org/10.11361/journalcpij.61.102" target="_blank" rel="noopener noreferrer" aria-label="論文のDOI / J-STAGEを開く：有志によるボランティア活動への住民参加意向の形成プロセス：性格特性およびソーシャル・キャピタルに着目した構造分析 ― 広島県福山市別所地区の砂留保全活動を事例として ―">DOI / J-STAGE ↗</a></div>
+    </article>
+<article class="pub-card">
+        <div class="pub-card-top"><span class="pub-year">2026</span><span class="pub-area">交通計画</span></div>
+        <h4>通学時間からみた高等学校の通学可能圏に基づく生徒数推計と統廃合基準に関する研究 ― 岡山県の公立全日制高校を対象として ―</h4>
+        <p class="pub-authors">樋口 輝久、碁石 真大、<strong>渡邊 詩穏</strong>、氏原 岳人、橋本 成仁</p>
+        <div class="pub-card-bottom"><span class="pub-citation">都市計画論文集 61(1), 87–95</span><a href="https://doi.org/10.11361/journalcpij.61.87" target="_blank" rel="noopener noreferrer" aria-label="論文のDOI / J-STAGEを開く：通学時間からみた高等学校の通学可能圏に基づく生徒数推計と統廃合基準に関する研究 ― 岡山県の公立全日制高校を対象として ―">DOI / J-STAGE ↗</a></div>
+    </article>
+<article class="pub-card">
+        <div class="pub-card-top"><span class="pub-year">2025</span><span class="pub-area">地域防災</span></div>
+        <h4>防災施設「砂留」の保全活動と近隣住民の防災意識・行動との関連性に関する研究</h4>
+        <p class="pub-authors">樋口 輝久、<strong>渡邊 詩穏</strong>、橋本 成仁</p>
+        <div class="pub-card-bottom"><span class="pub-citation">都市計画論文集 60(3), 931–937</span><a href="https://doi.org/10.11361/journalcpij.60.931" target="_blank" rel="noopener noreferrer" aria-label="論文のDOI / J-STAGEを開く：防災施設「砂留」の保全活動と近隣住民の防災意識・行動との関連性に関する研究">DOI / J-STAGE ↗</a></div>
+    </article></div>
+                <p class="publication-note">書誌情報は2026年10月時点の公開情報と本人提供の業績一覧に基づき整理しています。最新の掲載状況はresearchmapをご参照ください。</p>
+                <div class="academic-activities">
+                    <div class="academic-activities-head">
+                        <span class="academic-kicker">CONFERENCE PROCEEDINGS</span>
+                        <h3>学会発表・講演集掲載 <small>（掲載分）</small></h3>
+                    </div>
+                    <div class="conference-list">
+                        <article class="conference-item">
+          <time datetime="2025">2025</time>
+          <div><h4>避難場所の指定と地域住民の防災意識・行動の関連性</h4><p class="conference-authors"><strong>渡邊 詩穏</strong>、樋口 輝久、橋本 成仁</p><p class="conference-venue">土木計画学研究発表会・講演集（Web）, 第72回, 2025年</p></div>
+        </article>
+<article class="conference-item">
+          <time datetime="2024">2024</time>
+          <div><h4>防災施設「砂留」の存在が近隣住民の防災意識に及ぼす影響に関する一考察</h4><p class="conference-authors"><strong>渡邊 詩穏</strong>、樋口 輝久、橋本 成仁</p><p class="conference-venue">土木計画学研究・講演集（CD-ROM）, 第70回, 2024年</p></div>
+        </article>
+<article class="conference-item">
+          <time datetime="2024">2024</time>
+          <div><h4>砂留保全団体に属する構成員の所属動機の違いが住民意識に与える影響</h4><p class="conference-authors">樋口 輝久、<strong>渡邊 詩穏</strong>、橋本 成仁</p><p class="conference-venue">土木計画学研究・講演集（CD-ROM）, 第69回, 2024年</p></div>
+        </article>
+                    </div>
+                    <p class="conference-note">上記は確認済みの掲載実績です。2025年の発表など、今後も随時追加します。最新の業績一覧は<a class="academic-external" href="https://researchmap.jp/Shion_Watanabe" target="_blank" rel="noopener noreferrer">researchmap</a>をご参照ください。</p>
+                    <div class="academic-outreach">
+                        <div class="academic-activities-head"><span class="academic-kicker">OTHER PRESENTATIONS &amp; OUTREACH</span><h3>その他の研究発表・地域への成果報告 <small>（抜粋）</small></h3></div>
+                        <div class="academic-activity-rows">
+                            <div class="academic-activity-row"><time datetime="2026">2026</time><div><strong>APLUT 2026</strong><p>洪水時の避難と地区内一時避難場所に関する研究について発表。</p></div></div>
+                            <div class="academic-activity-row"><time datetime="2024">2024</time><div><strong>地域住民に向けた研究成果報告会</strong><p>住民調査の分析結果を地域で報告。</p></div></div>
+                        </div>
+                        <p class="academic-activity-note">その他の研究発表・成果報告は抜粋です。正式な発表題目などを確認後、随時追記します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="container contact-grid">
+                <div>
+                    <div class="mini-label">05 / CONTACT</div>
+                    <h2 id="contact-title">Get in touch.</h2>
+                    <p>共同研究や研究活動に関するご相談、研究職・インターンシップに関するご連絡は、下記メールアドレスまでお気軽にお寄せください。</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-detail">
+                        <span class="contact-label">EMAIL</span>
+                        <div class="contact-email-row">
+                            <a class="contact-email-link" href="mailto:shion@s.okayama-u.ac.jp">shion@s.okayama-u.ac.jp</a>
+                            <button class="contact-copy" type="button" id="copy-email" aria-label="メールアドレスをコピー">コピー</button>
+                        </div>
+                        <p class="contact-copy-status" id="copy-email-status" role="status" aria-live="polite"></p>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-label">RESEARCH PROFILE</span>
+                        <a class="research-profile-link" href="https://researchmap.jp/Shion_Watanabe" target="_blank" rel="noopener noreferrer">researchmap — Shion Watanabe <span class="external-mark" aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-line"><span>© <span id="year">2026</span> Shion Watanabe. All rights
+                reserved.</span><span>Research & Career Portfolio · Draft</span><a href="#top">BACK TO TOP ↑</a></div>
+    </footer>
+    <script>
+        (function () {
+            const year = document.getElementById('year'); year.textContent = new Date().getFullYear();
+            const nav = document.getElementById('navlinks'); const menu = document.querySelector('.hamburger');
+            menu.addEventListener('click', function () { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); });
+            nav.querySelectorAll('a').forEach(a => a.addEventListener('click', function () { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }));
+
+            // メールアドレスのコピー（ローカル閲覧時も可能な限り対応）
+            const emailButton = document.getElementById('copy-email');
+            const emailStatus = document.getElementById('copy-email-status');
+            if (emailButton && emailStatus) {
+                emailButton.addEventListener('click', async function () {
+                    const address = 'shion@s.okayama-u.ac.jp';
+                    let copied = false;
+                    try {
+                        if (navigator.clipboard && navigator.clipboard.writeText) {
+                            await navigator.clipboard.writeText(address);
+                            copied = true;
+                        }
+                    } catch (error) { /* フォールバックへ */ }
+                    if (!copied) {
+                        const field = document.createElement('textarea');
+                        field.value = address;
+                        field.style.position = 'fixed';
+                        field.style.opacity = '0';
+                        document.body.appendChild(field);
+                        field.focus();
+                        field.select();
+                        try { copied = document.execCommand('copy'); } catch (error) { /* コピー不可 */ }
+                        field.remove();
+                    }
+                    emailStatus.textContent = copied ? 'メールアドレスをコピーしました。' : 'コピーできませんでした。アドレスを選択してコピーしてください。';
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>
