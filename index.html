@@ -864,7 +864,7 @@
             max-width: 500px
         }
 
-        /* CONTACT — V10 */
+        /* CONTACT — display obfuscated email as text */
         .contact-info {
             min-width: 0;
             border-top: 1px solid #41636a;
@@ -884,45 +884,22 @@
             letter-spacing: .15em;
         }
 
-        .contact-email-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .contact-email-link {
+        .contact-email-text {
+            display: block;
             color: #fff;
             font-size: clamp(14px, 1.35vw, 17px);
             font-weight: 680;
             overflow-wrap: anywhere;
         }
 
-        .contact-email-link:hover,
+        .contact-email-note {
+            margin: 6px 0 0 !important;
+            font-size: 11px !important;
+            color: #b5cbc7 !important;
+        }
+
         .research-profile-link:hover {
             color: #f0ac8b;
-        }
-
-        .contact-copy {
-            padding: 7px 12px;
-            border: 1px solid #70908f;
-            border-radius: 6px;
-            background: transparent;
-            color: #e3eeeb;
-            cursor: pointer;
-            font-size: 11px;
-            font-weight: 720;
-            white-space: nowrap;
-        }
-
-        .contact-copy:hover { background: #28535a; }
-
-        .contact-copy-status {
-            margin: 5px 0 0 !important;
-            min-height: 1.5em;
-            font-size: 11px !important;
-            color: #d9b9a5 !important;
         }
 
         .research-profile-link {
@@ -1857,11 +1834,8 @@
                 <div class="contact-info">
                     <div class="contact-detail">
                         <span class="contact-label">EMAIL</span>
-                        <div class="contact-email-row">
-                            <a class="contact-email-link" href="mailto:shion@s.okayama-u.ac.jp">shion@s.okayama-u.ac.jp</a>
-                            <button class="contact-copy" type="button" id="copy-email" aria-label="メールアドレスをコピー">コピー</button>
-                        </div>
-                        <p class="contact-copy-status" id="copy-email-status" role="status" aria-live="polite"></p>
+                        <span class="contact-email-text">shion#s.okayama-u.ac.jp</span>
+                        <p class="contact-email-note">※ メール送信時は「#」を「@」に置き換えてください。</p>
                     </div>
                     <div class="contact-detail">
                         <span class="contact-label">RESEARCH PROFILE</span>
@@ -1882,60 +1856,6 @@
             menu.addEventListener('click', function () { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); });
             nav.querySelectorAll('a').forEach(a => a.addEventListener('click', function () { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }));
 
-             // メールアドレスのコピー（迷惑メール収集対策）
-            const emailButton = document.getElementById('copy-email');
-            const emailStatus = document.getElementById('copy-email-status');
-
-            if (emailButton && emailStatus) {
-                emailButton.addEventListener('click', async function () {
-
-                    // アドレスを分割し、クリック時にだけ復元
-                    const user = ['sh', 'ion'].join('');
-                    const domain = ['s', 'okayama-u', 'ac', 'jp'].join('.');
-                    const address = user + String.fromCharCode(64) + domain;
-
-                    let copied = false;
-
-                    // HTTPS環境でのコピー
-                    try {
-                        if (navigator.clipboard && navigator.clipboard.writeText) {
-                            await navigator.clipboard.writeText(address);
-                            copied = true;
-                        }
-                    } catch (error) {
-                        // フォールバックへ
-                    }
-
-                    // ローカル環境等での代替コピー処理
-                    if (!copied) {
-                        const field = document.createElement('textarea');
-                        field.value = address;
-                        field.setAttribute('readonly', '');
-                        field.style.position = 'fixed';
-                        field.style.left = '-9999px';
-
-                        document.body.appendChild(field);
-                        field.focus();
-                        field.select();
-
-                        try {
-                            copied = document.execCommand('copy');
-                        } catch (error) {
-                            // コピー不可
-                        }
-
-                        field.remove();
-                    }
-
-                    // コピー結果を表示
-                    if (copied) {
-                        emailStatus.textContent = 'メールアドレスをコピーしました。';
-                    } else {
-                        emailStatus.textContent =
-                            'コピーできませんでした。以下を手動でコピーしてください：' + address;
-                    }
-                });
-            }
         })();
     </script>
 </body>
